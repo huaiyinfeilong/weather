@@ -2,10 +2,10 @@ package com.xysoftlab.android.weather;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import java.util.Calendar;
-import java.util.ArrayList;
+
 
 public class MainActivity extends Activity {
 
@@ -15,38 +15,27 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-	void InitializeDayButtons()
-	{
-		Calendar calendar = Calendar.getInstance();
-		int dayOfWeek, month, day;
-		ArrayList buttonTextList = new ArrayList();
-		for (int i = 0; i < 7; i++)
-		{
-			calendar.add(Calendar.DAY_OF_YEAR, i);
-			dayOfWeek = calendar.get(Calendar.DAY_OF_YEAR);
-			month = calendar.get(Calendar.MONTH) + 1;
-			day = calendar.get(Calendar.DAY_OF_YEAR);
-			String buttonText；
-			switch (dayOfWeek)
-			{
-			case 1:
-				buttonText = String.format("周一 %d月%d日", month, day);
-			break;
-			case 2:
-			break;
-			case 3:
-			break;
-			case 4:
-			break;
-			case 5:
-			break;
-			case 6:
-			break;
-			case 7:
-			break;
-			}
-			buttonTextList.add(buttonText);
-		}
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+	public void onClick(View v)
+	{
 	}
 }
