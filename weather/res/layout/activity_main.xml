@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/weather_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="正在加载天气信息..." />
+
+    <Button
+        android:id="@+id/day1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="今天" />
+
+    <Button
+        android:id="@+id/day2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/day1"
+    android:layout_alignTop="@id/day1"
+        android:text="明天" />
+
+    <Button
+        android:id="@+id/day3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/day2"
+    android:layout_alignTop="@id/day2"
+        android:text="后天" />
+
+    <Button
+        android:id="@+id/day4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/day3"
+    android:layout_alignTop="@id/day3"
+        android:text="第四天" />
+
+    <Button
+        android:id="@+id/day5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/day4"
+    android:layout_alignTop="@id/day4"
+        android:text="第五天" />
+
+</RelativeLayout>
